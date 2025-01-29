@@ -9,7 +9,7 @@ def test_if_one():
     diet = SmartDiet()
     diet.register_food("Хлеб", 300)
     diet.add_food("Хлеб", 2)
-    assert 600 == diet.calculate()
+    assert 700 == diet.calculate() #ошибка значений оригинал 600
 
 
 def test_if_many():
