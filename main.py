@@ -13,4 +13,4 @@ class SmartDiet:
         return self.total_calories
 
     def broken_function():
-        return "Error" + 123  # Пример ошибки: добавление строки и числа
+        return "Error 123"  # Исправление
