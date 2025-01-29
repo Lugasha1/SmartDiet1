@@ -1,0 +1,36 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main   # Когда изменения отправляются в ветку main
+  pull_request:
+    branches:
+      - main   # При создании Pull Request в основную ветку
+
+jobs:
+  test:
+    # Виртуальная машина для запуска задач
+    runs-on: ubuntu-latest
+
+    steps:
+      # Получение кода из репозитория
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Установка Python
+      - name: Set up Python (3.8)
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      # Установка зависимостей
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip  # Обновление pip
+          pip install pytest                  # Установка pytest
+
+      # Запуск тестов с pytest
+      - name: Run tests
+        run: |
+          pytest main_test.py  # Автоматический запуск ваших тестов
