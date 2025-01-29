@@ -1,0 +1,19 @@
+# Исключение настроек IDE
+.idea/
+*.iml
+
+# Исключение временных файлов Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Логи и временные файлы ОС
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Исключение тестовых файлов
+.pytest_cache/
